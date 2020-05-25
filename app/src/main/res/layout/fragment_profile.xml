@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/showProfileConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/profile_pic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/profileUserName"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="60dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/profilePic"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="30dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Full Name:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profilePic" />
+
+                    <TextView
+                        android:id="@+id/profileFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@+id/editFullName"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+                    <ImageView
+                        android:id="@+id/editFullName"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_edit"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Phone Number:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileFullName" />
+
+                    <TextView
+                        android:id="@+id/profilePhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+                    <ImageView
+                        android:id="@+id/editPhone"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_edit"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/profilePhone"
+                        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Email ID:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profilePhone" />
+
+                    <TextView
+                        android:id="@+id/profileEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Date Of Birth:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileEmail" />
+
+                    <TextView
+                        android:id="@+id/profileDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Age:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileDOB" />
+
+                    <TextView
+                        android:id="@+id/profileAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+                    <ImageView
+                        android:id="@+id/editAge"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_edit"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/profileAge"
+                        app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Father's Name:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileAge" />
+
+                    <TextView
+                        android:id="@+id/profileFather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv6" />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="School/College:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileFather" />
+
+                    <TextView
+                        android:id="@+id/profileScl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv7" />
+
+                    <ImageView
+                        android:id="@+id/editSchool"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_edit"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/profileScl"
+                        app:layout_constraintTop_toBottomOf="@+id/tv7" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="Class/Year:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileScl" />
+
+                    <TextView
+                        android:id="@+id/profileCls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv8" />
+
+                    <ImageView
+                        android:id="@+id/editCls"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_edit"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/profileCls"
+                        app:layout_constraintTop_toBottomOf="@+id/tv8" />
+
+                    <TextView
+                        android:id="@+id/tv9"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:text="City:"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileCls" />
+
+                    <TextView
+                        android:id="@+id/profileCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:padding="2dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv9" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/logInToSeeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Log In to see your profile"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:visibility="gone"
+            android:layout_marginTop="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goToLogInFromProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Click here to Log In"
+            android:textColor="#E10707"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logInToSeeProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

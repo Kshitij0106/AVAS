@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AVAS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="address">Block G 5, 2nd Floor, Above Happy Home Jr. School, Adjoining Ryan International School, \nSector - 11, Rohini New Delhi-110085 (India)</string>
+    <string name="who_we_are">AVAS- A unit of G.A. Future Educore Pvt Ltd, registered under Companies Act, 1956(No 1 of 1956), one of the India’s leading eminent education provider company based at New Delhi.\n\n AVAS – An approved partner of NSDC (National Skill Development Corporation). It is the only organization accredited by NABET, QCI, Governed by MHRD (Ministry of Human Resource Development).\n We are providing services in relation to Abacus, Vedic Maths, Robotics, Handwriting Training Program and Teachers Training Program. We have developed our Research and Development team to bring many more programs to enhance the quality education.</string>
+    <string name="what_we_do">AVAS - one of the leading organization working in schools, propagating the knowledge of ABACUS and VEDIC MATHS for strengthening and understanding of mathematics at elementary level.\n We are committed to upgrade the quality of teaching of Math with a support of dedicated team of trainers with wide experience and excellent track record.\nOur Programs also include Robotics, Handwriting Training Program, Teachers Training Program.</string>
+</resources>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplicationForm">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayoutApplicationForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#2196F3"
+                android:gravity="center"
+                android:text="One Last Important Step"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/tvv1"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="Phone Number"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/formPhone"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv1" />
+
+                    <TextView
+                        android:id="@+id/tvv2"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Father's Name"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formPhone" />
+
+                    <EditText
+                        android:id="@+id/formFatherName"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv2" />
+
+                    <TextView
+                        android:id="@+id/tvv3"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="Date of Birth (DD/MM/YYYY)"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formFatherName" />
+
+                    <EditText
+                        android:id="@+id/formDOB"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv3" />
+
+                    <TextView
+                        android:id="@+id/tvv4"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="Age"
+                        android:textColor="#000"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formDOB" />
+
+                    <EditText
+                        android:id="@+id/formAge"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv4" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupStudy"
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formAge">
+
+                        <RadioButton
+                            android:id="@+id/sRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Studying" />
+
+                        <RadioButton
+                            android:id="@+id/pRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Passed Out" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tvv5"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="School/College Name"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radioGroupStudy" />
+
+                    <EditText
+                        android:id="@+id/formScl"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv5" />
+
+                    <TextView
+                        android:id="@+id/tvv6"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Class/Year"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formScl" />
+
+                    <EditText
+                        android:id="@+id/formCls"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="textPersonName"
+                        android:maxLength="10"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv6" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupMarriage"
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formCls">
+
+                        <RadioButton
+                            android:id="@+id/uRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Unmarried" />
+
+                        <RadioButton
+                            android:id="@+id/mRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Married" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tvv7"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="Spouse Name"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radioGroupMarriage" />
+
+                    <EditText
+                        android:id="@+id/formSpouseName"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:enabled="false"
+                        android:gravity="start|center"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv7" />
+
+                    <TextView
+                        android:id="@+id/tvv8"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="City"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formSpouseName" />
+
+                    <EditText
+                        android:id="@+id/formCity"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv8" />
+
+                    <TextView
+                        android:id="@+id/tvv9"
+                        android:layout_width="370dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start|center"
+                        android:padding="5dp"
+                        android:text="Reference by Avas Person Name"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/formCity" />
+
+                    <EditText
+                        android:id="@+id/formReference"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start|center"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvv9" />
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="280dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_button"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/formReference" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

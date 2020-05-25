@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/coursesNav"
+        android:icon="@drawable/mycourses"
+        android:title="My Courses" />
+
+    <item
+        android:id="@+id/chatNav"
+        android:icon="@drawable/chat"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/prfileNav"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/settingsNav"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+</menu>

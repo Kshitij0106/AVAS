@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "564910092878",
+    "firebase_url": "https://avas-4a8ac.firebaseio.com",
+    "project_id": "avas-4a8ac",
+    "storage_bucket": "avas-4a8ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564910092878:android:222617a24f01714ee6c91f",
+        "android_client_info": {
+          "package_name": "com.edu.avas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564910092878-71kcufi89qfu90jpaj6ds7rnnem1cbme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9cVyAiuUeXZu_L0iZyxbMuMxPhDKjPTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564910092878-71kcufi89qfu90jpaj6ds7rnnem1cbme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

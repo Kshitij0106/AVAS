@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUsFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#2196F3"
+                    android:gravity="center"
+                    android:text="G.A.FUTURE EDUCORE PVT. LTD."
+                    android:textColor="#ffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@drawable/location"
+                    android:gravity="start|center"
+                    android:padding="2dp"
+                    android:text=" Visit Us:"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+                <TextView
+                    android:id="@+id/companyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="start|center"
+                    android:padding="4dp"
+                    android:text="@string/address"
+                    android:textColor="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@drawable/user_phone"
+                    android:gravity="start|center"
+                    android:padding="2dp"
+                    android:text=" Call us At:"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companyAddress" />
+
+                <TextView
+                    android:id="@+id/companyPhone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="start|center"
+                    android:padding="4dp"
+                    android:text="011 - 27572665"
+                    android:textColor="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+                <TextView
+                    android:id="@+id/companyPhone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="start|center"
+                    android:padding="4dp"
+                    android:text="+91 - 8860633401"
+                    android:textColor="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companyPhone1" />
+
+                <TextView
+                    android:id="@+id/companyPhone3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="start|center"
+                    android:padding="4dp"
+                    android:text="+91 - 8860633401-10"
+                    android:textColor="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companyPhone2" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@drawable/user_mail"
+                    android:gravity="start|center"
+                    android:padding="2dp"
+                    android:text=" Mail us At:"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companyPhone2" />
+
+                <TextView
+                    android:id="@+id/companyEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="start|center"
+                    android:padding="4dp"
+                    android:text=" avasindia1@gmail.com "
+                    android:textColor="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@drawable/browser"
+                    android:gravity="start|center"
+                    android:padding="2dp"
+                    android:text=" Find Us Online :"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companyEmail" />
+
+                <TextView
+                    android:id="@+id/companyWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="start|center"
+                    android:padding="4dp"
+                    android:text="www.abacus-vedicmaths.com"
+                    android:textColor="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
