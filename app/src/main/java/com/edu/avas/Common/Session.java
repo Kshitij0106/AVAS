@@ -3,7 +3,7 @@ package com.edu.avas.Common;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class Session {
+public class  Session {
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
     private Context context;

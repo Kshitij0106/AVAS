@@ -27,9 +27,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class CourseDetailsFragment extends Fragment {
     private SwipeRefreshLayout swipeLayoutCourseDetails;
-    private TextView courseDetailsName, courseDetailsDesc, courseDetailsAvailability;
+    private TextView courseDetailsName, courseDetailsDesc, courseDetailsAvailability, courseDetailsPrice;
     private Button buyNowButton;
     private DatabaseReference ref, courseRequest, userRef;
     private FirebaseAuth auth;
@@ -49,6 +52,7 @@ public class CourseDetailsFragment extends Fragment {
         swipeLayoutCourseDetails = view.findViewById(R.id.swipeLayoutCourseDetails);
         courseDetailsName = view.findViewById(R.id.courseDetailsName);
         courseDetailsDesc = view.findViewById(R.id.courseDetailsDesc);
+        courseDetailsPrice = view.findViewById(R.id.courseDetailsPrice);
         courseDetailsAvailability = view.findViewById(R.id.courseDetailsAvailability);
         buyNowButton = view.findViewById(R.id.buyNowButton);
         session = new Session(getContext());
@@ -78,6 +82,10 @@ public class CourseDetailsFragment extends Fragment {
                     String a = courses.getCourseDesc();
                     String desc = a.replace("\\n", "\n");
                     courseDetailsDesc.setText(desc);
+                    int price = Integer.parseInt(courses.getCoursePrice());
+                    Locale locale = new Locale("EN","IN");
+                    NumberFormat fmt = NumberFormat.getCurrencyInstance(locale);
+                    courseDetailsPrice.setText("-> Course Price: "+fmt.format(price));
                     String courseAvailability = courses.getCourseAvailability();
                     if (courseAvailability.equals("NA")) {
                         courseDetailsAvailability.setVisibility(View.VISIBLE);
@@ -116,16 +124,18 @@ public class CourseDetailsFragment extends Fragment {
                                     form.setArguments(cNameBundle);
                                     getFragmentManager().beginTransaction().replace(R.id.mainPage, form).addToBackStack("").commit();
                                 } else {
+                                    //open payment link
                                     courseRequest = FirebaseDatabase.getInstance().getReference("Students").child(uid).child("My Courses");
 
                                     String oId = String.valueOf(System.currentTimeMillis());
-                                    Courses requestCourse = new Courses(courseName, oId, "Pending");
+                                    String price = courseDetailsPrice.getText().toString();
+                                    Courses requestCourse = new Courses(courseName,oId, "Pending");
                                     courseRequest.child(oId).setValue(requestCourse);
                                     MyCoursesDatabase database = new MyCoursesDatabase(getContext());
                                     database.addToList(courseName);
 
                                     getFragmentManager().beginTransaction().replace(R.id.mainPage, new HomePageFragment()).addToBackStack("").commit();
-                                    Toast.makeText(getContext(), "Course Requested \n Please Wait till teacher gives you access", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getContext(), "Course Requested \nPlease Wait till teacher gives you access", Toast.LENGTH_LONG).show();
                                 }
                             }
 

@@ -66,16 +66,30 @@
                         android:id="@+id/courseDetailsDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
                         android:gravity="start|center"
                         android:paddingLeft="4dp"
                         android:paddingRight="4dp"
                         android:textColor="#000"
-                        android:layout_marginTop="20dp"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/courseDetailsAvailability" />
+
+                    <TextView
+                        android:id="@+id/courseDetailsPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:textColor="#000"
+                        android:layout_marginTop="10dp"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/courseDetailsAvailability" />
+                        app:layout_constraintTop_toBottomOf="@+id/courseDetailsDesc" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -86,7 +100,7 @@
                 android:layout_width="280dp"
                 android:layout_height="50dp"
                 android:background="@drawable/round_button"
-                android:text="Request Access"
+                android:text="Buy Now"
                 android:textSize="25sp"
                 android:gravity="center"
                 android:layout_marginLeft="60dp"

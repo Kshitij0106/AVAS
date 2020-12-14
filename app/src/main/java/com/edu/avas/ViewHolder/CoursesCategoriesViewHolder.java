@@ -17,5 +17,6 @@ public class CoursesCategoriesViewHolder extends RecyclerView.ViewHolder {
 
         coursesTitle = itemView.findViewById(R.id.coursesTitle);
         coursesRecyclerView = itemView.findViewById(R.id.coursesRecyclerView);
+        coursesRecyclerView.setHasFixedSize(true);
     }
 }

@@ -36,8 +36,9 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
 
     @Override
     public void onBindViewHolder(@NonNull CoursesViewHolder holder, int position) {
-        Picasso.get().load(coursesList.get(holder.getAdapterPosition()).getCoursePic()).fit().centerCrop().into(holder.coursePic);
-        holder.courseName.setText(coursesList.get(holder.getAdapterPosition()).getCourseName());
+        Picasso.get().load(coursesList.get(holder.getAdapterPosition()).getCoursePic()).fit().into(holder.coursePic);
+//                              or
+        holder.courseName.setText(coursesList.get(position).getCourseName());
     }
 
     @NonNull

@@ -64,6 +64,7 @@ public class HomePageFragment extends Fragment {
         session = new Session(getContext());
 
         categoriesRecyclerView = view.findViewById(R.id.categoriesRecyclerView);
+        categoriesRecyclerView.setHasFixedSize(true);
         courses = new ArrayList<>();
         myCourses = new ArrayList<>();
 
@@ -127,7 +128,6 @@ public class HomePageFragment extends Fragment {
                         }
                     });
 
-                    coursesCategoriesViewHolder.coursesRecyclerView.setHasFixedSize(true);
                     coursesCategoriesViewHolder.coursesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     coursesCategoriesViewHolder.coursesRecyclerView.setAdapter(adapter);
                     coursesCategoriesViewHolder.coursesRecyclerView.setNestedScrollingEnabled(false);
@@ -142,9 +142,8 @@ public class HomePageFragment extends Fragment {
                 }
             };
 
-            categoriesRecyclerView.setHasFixedSize(true);
-            categoriesRecyclerView.setAdapter(coursesAdapter);
             categoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            categoriesRecyclerView.setAdapter(coursesAdapter);
             coursesAdapter.startListening();
             coursesAdapter.notifyDataSetChanged();
         } else {

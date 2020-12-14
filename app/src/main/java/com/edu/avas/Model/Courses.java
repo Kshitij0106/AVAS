@@ -1,12 +1,13 @@
 package com.edu.avas.Model;
 
 public class Courses {
-    String courseName,courseDesc,coursePic,courseVideo,videoTitle,orderId,status,courseAvailability;
+    String courseName,courseDesc,coursePic,courseVideo,videoTitle,orderId,status,courseAvailability,coursePrice;
 
     public Courses() {
     }
 
-    public Courses(String courseName, String courseDesc,String coursePic,String status,String courseVideo,String videoTitle,String courseAvailability) {
+    public Courses(String courseName, String courseDesc,String coursePic,String status,
+                   String courseVideo,String videoTitle,String courseAvailability,String coursePrice) {
         this.courseName = courseName;
         this.courseDesc = courseDesc;
         this.courseAvailability = courseAvailability;
@@ -14,9 +15,10 @@ public class Courses {
         this.status = status;
         this.courseVideo = courseVideo;
         this.videoTitle = videoTitle;
+        this.coursePrice = coursePrice;
     }
 
-    public Courses(String courseName, String orderId,String status) {
+    public Courses(String courseName,String orderId,String status) {
         this.courseName = courseName;
         this.orderId = orderId;
         this.status = status;
@@ -52,6 +54,14 @@ public class Courses {
 
     public void setCourseAvailability(String courseAvailability) {
         this.courseAvailability = courseAvailability;
+    }
+
+    public String getCoursePrice() {
+        return coursePrice;
+    }
+
+    public void setCoursePrice(String coursePrice) {
+        this.coursePrice = coursePrice;
     }
 
     public String getOrderId() {
